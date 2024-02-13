@@ -1,0 +1,8 @@
+#!/bin/sh
+#SBATCH -J python
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=1
+#SBATCH -c 64
+Np=64
+srun python calc_visc_bootstrap.py ${Np} >> bootstrap_log.txt
+

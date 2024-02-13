@@ -1,0 +1,8 @@
+#!/bin/sh
+#SBATCH -J python
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=1
+#SBATCH -c 16
+Np=16
+srun python calc_visc.py ${Np} >> visc_log.txt
+
